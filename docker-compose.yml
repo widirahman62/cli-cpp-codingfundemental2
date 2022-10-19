@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  cppapp2:
+    container_name: cppapp2
+    privileged: true
+    stdin_open: true
+    tty: true
+    build: ./docker
+    volumes:
+      - ./src:/home/src
+    network_mode: "none"
